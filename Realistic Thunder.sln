@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pegasus", "Pegasus\Pegasus.vcxproj", "{A15C328A-646E-4EEA-B972-0BF0BF3E1F3F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Realistic Thunder", "Realistic\Realistic.vcxproj", "{27607424-31A7-4960-84B9-D1D3E0DBCB4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{A15C328A-646E-4EEA-B972-0BF0BF3E1F3F}.Release|x64.Build.0 = Release|x64
 		{A15C328A-646E-4EEA-B972-0BF0BF3E1F3F}.Release|x86.ActiveCfg = Release|Win32
 		{A15C328A-646E-4EEA-B972-0BF0BF3E1F3F}.Release|x86.Build.0 = Release|Win32
+		{27607424-31A7-4960-84B9-D1D3E0DBCB4A}.Debug|x64.ActiveCfg = Debug|x64
+		{27607424-31A7-4960-84B9-D1D3E0DBCB4A}.Debug|x64.Build.0 = Debug|x64
+		{27607424-31A7-4960-84B9-D1D3E0DBCB4A}.Debug|x86.ActiveCfg = Debug|Win32
+		{27607424-31A7-4960-84B9-D1D3E0DBCB4A}.Debug|x86.Build.0 = Debug|Win32
+		{27607424-31A7-4960-84B9-D1D3E0DBCB4A}.Release|x64.ActiveCfg = Release|x64
+		{27607424-31A7-4960-84B9-D1D3E0DBCB4A}.Release|x64.Build.0 = Release|x64
+		{27607424-31A7-4960-84B9-D1D3E0DBCB4A}.Release|x86.ActiveCfg = Release|Win32
+		{27607424-31A7-4960-84B9-D1D3E0DBCB4A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

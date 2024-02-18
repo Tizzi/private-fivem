@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a15c328a-646e-4eea-b972-0bf0bf3e1f3f}</ProjectGuid>
+    <ProjectGuid>{27607424-31A7-4960-84B9-D1D3E0DBCB4A}</ProjectGuid>
     <RootNamespace>Realistic Thunder</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>Realistic Thunder</ProjectName>
@@ -83,7 +83,7 @@
     <LibraryPath>$(ProjectDir)ext\Discord;F:\Microsoft DirectX SDK (June 2010)\Lib\x64;$(LibraryPath)</LibraryPath>
     <TargetName>d3d10</TargetName>
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>C:\Users\TranMC\AppData\Local\FiveM\FiveM.app\plugins\</OutDir>
+    <OutDir>$(ProjectDir)bin</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
