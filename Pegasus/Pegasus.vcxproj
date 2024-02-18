@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{a15c328a-646e-4eea-b972-0bf0bf3e1f3f}</ProjectGuid>
+    <RootNamespace>Realistic Thunder</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Realistic Thunder</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(ProjectDir)ext\dpp;$(ProjectDir)ext\Log;$(ProjectDir)ext\Auth;$(ProjectDir)ext\Game;$(ProjectDir)ext\Hacks;$(ProjectDir)ext\ImGui;$(ProjectDir)ext\Includes;$(ProjectDir)ext\Memory;$(ProjectDir)ext\minhook;$(ProjectDir)ext\Security;F:\Microsoft DirectX SDK (June 2010)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)ext\;F:\Microsoft DirectX SDK (June 2010)\Lib\x64;$(LibraryPath)</LibraryPath>
+    <TargetName>d3d10</TargetName>
+    <OutDir>C:\Users\TranMC\AppData\Local\FiveM\FiveM.app\plugins</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(ProjectDir)ext\msgpack;$(ProjectDir)ext\Discord;$(ProjectDir)\ext\minhook;$(ProjectDir)\ext\Tls-Invoker;$(ProjectDir)ext\Log;$(ProjectDir)ext\Auth;$(ProjectDir)ext\Game;$(ProjectDir)ext\Hacks;$(ProjectDir)ext\ImGui;$(ProjectDir)ext\Includes;$(ProjectDir)ext\Memory;$(ProjectDir)ext\Security;F:\Microsoft DirectX SDK (June 2010)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)ext\Discord;F:\Microsoft DirectX SDK (June 2010)\Lib\x64;$(LibraryPath)</LibraryPath>
+    <TargetName>d3d10</TargetName>
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>C:\Users\TranMC\AppData\Local\FiveM\FiveM.app\plugins\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <LinkStatus>true</LinkStatus>
+      <AdditionalDependencies>$(SolutionDir)\Pegasus\src\keyauth\library_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Manifest>
+      <InputResourceManifests>Manifest2.res</InputResourceManifests>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>RESHADE_FX;RESHADE_GUI;RESHADE_API_LIBRARY_EXPORT;RESHADE_ADDON;RESHADE_ADDON_LITE;_HAS_EXCEPTIONS=0;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <Optimization>MaxSpeed</Optimization>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>$(SolutionDir)\Pegasus\ext\keyauth\libcurl.lib;$(SolutionDir)\Pegasus\ext\keyauth\library_x64.lib;Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AssemblyDebug>true</AssemblyDebug>
+      <LinkStatus>true</LinkStatus>
+      <EnableUAC>true</EnableUAC>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
+      <UACUIAccess>false</UACUIAccess>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>false</GenerateMapFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ext\ImGui\backend\imgui_impl_dx11.cpp" />
+    <ClCompile Include="ext\ImGui\backend\imgui_impl_win32.cpp" />
+    <ClCompile Include="ext\ImGui\imgui.cpp" />
+    <ClCompile Include="ext\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="ext\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="ext\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="ext\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="ext\ImGui\theme.cpp" />
+    <ClCompile Include="ext\Log\Log.cpp" />
+    <ClCompile Include="ext\minhook\buffer.c" />
+    <ClCompile Include="ext\minhook\hde\hde32.c" />
+    <ClCompile Include="ext\minhook\hde\hde64.c" />
+    <ClCompile Include="ext\minhook\hook.c" />
+    <ClCompile Include="ext\minhook\trampoline.c" />
+    <ClCompile Include="src\Game\cache.cpp" />
+    <ClCompile Include="src\Game\GameMath.cpp" />
+    <ClCompile Include="src\Game\Menus.cpp" />
+    <ClCompile Include="src\Game\Obs_Streamproof.cpp" />
+    <ClCompile Include="src\Game\Offsets.cpp" />
+    <ClCompile Include="src\Game\Pattern.cpp" />
+    <ClCompile Include="src\Game\vehhk.cpp" />
+    <ClCompile Include="src\Hacks\3DRadar.cpp" />
+    <ClCompile Include="src\Hacks\Aimbot.cpp" />
+    <ClCompile Include="src\Hacks\Player.cpp" />
+    <ClCompile Include="src\Hacks\resources.cpp" />
+    <ClCompile Include="src\Hacks\Vehicle.cpp" />
+    <ClCompile Include="src\Hacks\Weapons.cpp" />
+    <ClCompile Include="src\Hacks\world.cpp" />
+    <ClCompile Include="src\Includes\Config.cpp" />
+    <ClCompile Include="src\Includes\Renderer.cpp" />
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\Memory\Memory.cpp" />
+    <ClCompile Include="src\Tls-Invoker\fiber.cpp" />
+    <ClCompile Include="src\Tls-Invoker\scripthook.cpp" />
+    <ClCompile Include="src\Tls-Invoker\thread.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ext\Game\cache.h" />
+    <ClInclude Include="ext\Game\Classes.h" />
+    <ClInclude Include="ext\Game\CPlayerGameStateDataNode.hpp" />
+    <ClInclude Include="ext\Game\discord.h" />
+    <ClInclude Include="ext\Game\GameMath.h" />
+    <ClInclude Include="ext\Game\Menus.h" />
+    <ClInclude Include="ext\Game\Obs_Streamproof.h" />
+    <ClInclude Include="ext\Game\Offsets.h" />
+    <ClInclude Include="ext\Game\Pattern.h" />
+    <ClInclude Include="ext\Hacks\3DRadar.h" />
+    <ClInclude Include="ext\Hacks\Aimbot.h" />
+    <ClInclude Include="ext\Hacks\Classes.h" />
+    <ClInclude Include="ext\Hacks\GameMath.h" />
+    <ClInclude Include="ext\Hacks\Hook.h" />
+    <ClInclude Include="ext\Hacks\Offsets.h" />
+    <ClInclude Include="ext\Hacks\Pattern.h" />
+    <ClInclude Include="ext\Hacks\Player.h" />
+    <ClInclude Include="ext\Hacks\Vehicle.h" />
+    <ClInclude Include="ext\Hacks\Weapon.h" />
+    <ClInclude Include="ext\Hacks\World.h" />
+    <ClInclude Include="ext\ImGui\backend\imgui_impl_dx11.h" />
+    <ClInclude Include="ext\ImGui\backend\imgui_impl_win32.h" />
+    <ClInclude Include="ext\ImGui\imconfig.h" />
+    <ClInclude Include="ext\ImGui\imgui.h" />
+    <ClInclude Include="ext\ImGui\imgui_internal.h" />
+    <ClInclude Include="ext\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="ext\ImGui\imstb_textedit.h" />
+    <ClInclude Include="ext\ImGui\imstb_truetype.h" />
+    <ClInclude Include="ext\ImGui\theme.h" />
+    <ClInclude Include="ext\Includes\Config.h" />
+    <ClInclude Include="ext\Includes\Includes.h" />
+    <ClInclude Include="ext\Includes\vehhk.h" />
+    <ClInclude Include="ext\Includes\Renderer.h" />
+    <ClInclude Include="ext\Includes\Variables.h" />
+    <ClInclude Include="ext\Includes\Vectors.h" />
+    <ClInclude Include="ext\keyauth\curl\curl.h" />
+    <ClInclude Include="ext\keyauth\curl\curlver.h" />
+    <ClInclude Include="ext\keyauth\curl\easy.h" />
+    <ClInclude Include="ext\keyauth\curl\mprintf.h" />
+    <ClInclude Include="ext\keyauth\curl\multi.h" />
+    <ClInclude Include="ext\keyauth\curl\stdcheaders.h" />
+    <ClInclude Include="ext\keyauth\curl\system.h" />
+    <ClInclude Include="ext\keyauth\curl\typecheck-gcc.h" />
+    <ClInclude Include="ext\keyauth\curl\urlapi.h" />
+    <ClInclude Include="ext\Log\Log.h" />
+    <ClInclude Include="ext\Memory\Memory.h" />
+    <ClInclude Include="ext\minhook\buffer.h" />
+    <ClInclude Include="ext\minhook\hde\hde32.h" />
+    <ClInclude Include="ext\minhook\hde\hde64.h" />
+    <ClInclude Include="ext\minhook\hde\pstdint.h" />
+    <ClInclude Include="ext\minhook\hde\table32.h" />
+    <ClInclude Include="ext\minhook\hde\table64.h" />
+    <ClInclude Include="ext\minhook\MinHook.h" />
+    <ClInclude Include="ext\minhook\trampoline.h" />
+    <ClInclude Include="ext\Tls-Invoker\fiber.hpp" />
+    <ClInclude Include="ext\Tls-Invoker\hashes.hpp" />
+    <ClInclude Include="ext\Tls-Invoker\joaat_.hpp" />
+    <ClInclude Include="ext\Tls-Invoker\joaat.hpp" />
+    <ClInclude Include="ext\Tls-Invoker\scripthook.hpp" />
+    <ClInclude Include="ext\Tls-Invoker\invoker.hpp" />
+    <ClInclude Include="ext\Tls-Invoker\invoker_definitions.hpp" />
+    <ClInclude Include="ext\Tls-Invoker\singeton.hpp" />
+    <ClInclude Include="ext\Tls-Invoker\spoof_call.h" />
+    <ClInclude Include="ext\Tls-Invoker\thread.hpp" />
+    <ClInclude Include="ext\Tls-Invoker\tick.hpp" />
+    <ClInclude Include="src\Fonts.h" />
+    <ClInclude Include="ext\keyauth\auth.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\adl_serializer.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\byte_container_with_subtype.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\conversions\from_json.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\conversions\to_chars.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\conversions\to_json.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\exceptions.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\hash.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\input\binary_reader.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\input\input_adapters.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\input\json_sax.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\input\lexer.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\input\parser.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\input\position_t.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\iterators\internal_iterator.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\iterators\iteration_proxy.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\iterators\iterator_traits.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\iterators\iter_impl.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\iterators\json_reverse_iterator.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\iterators\primitive_iterator.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\json_pointer.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\json_ref.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\macro_scope.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\macro_unscope.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\meta\cpp_future.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\meta\detected.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\meta\is_sax.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\meta\type_traits.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\meta\void_t.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\output\binary_writer.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\output\output_adapters.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\output\serializer.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\detail\value_t.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\json.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\json_fwd.hpp" />
+    <ClInclude Include="src\keyauth\nlohmann\ordered_map.hpp" />
+    <ClInclude Include="ext\keyauth\skStr.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="ext\keyauth\libcurl.lib" />
+    <Library Include="ext\keyauth\library_x64.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="ext\Tls-Invoker\spoofer_stub.asm">
+      <FileType>Document</FileType>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ext\minhook\dll_resources\MinHook.def" />
+    <None Include="ext\minhook\MinHook.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ext\minhook\dll_resources\MinHook.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
