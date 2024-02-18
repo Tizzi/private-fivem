@@ -32,12 +32,7 @@ inline void invokerInitPattern()
 	registrationTable = reinterpret_cast<NativeRegistration_obf**>(g_Memory->find_pattern(0, Encrypt("76 32 48 8B 53 40"), 13, 0));
 	auto mdl = GetModuleHandleA("rage-scripting-five.dll");
 	auto test1 = g_Memory->find_pattern(Encrypt("rage-scripting-five.dll"), Encrypt("48 8D 0D ? ? ? ? E8 ? ? ? ? 48 8B 08 48 89 59 ? 4C 8B"), 0, 0);
-	if (test1 - (uintptr_t)mdl != 0x13632c)
-	{
-		//Log::Msg("0x%llx", test1 - (uintptr_t)mdl);
-		g_fastPathMap = *(g_fastPathMap_t*)mdl;
-		g_mappingTable = *(g_mappingTable_t*)mdl;
-	}
+
 
 	//SettOffset();
 	//hook_native<NativeRegistration_obf>(MapNative(0x47E4E977581C5B55), reinterpret_cast<NativeHandler>(caca));
